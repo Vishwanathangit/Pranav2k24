@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: woodcut;
+    src: url(WOODCUT.TTF);
+}
+
+body {
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    flex-flow: column;
+    margin-bottom: 40px;
+}
+
+.grama{
+    position: absolute;
+    z-index: -1;
+    bottom: -40%;
+    opacity: 0.7;
+}
+
+.micro{
+    position: absolute;
+    bottom: -10%;
+    right: -50%;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.type{
+    position: absolute;
+    z-index: -1;
+    top: -20%;
+    opacity: 0.7;
+}
+.container {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    flex-flow: column;
+    
+}
+
+.tech{
+    width: fit-content;
+    height: fit-content;
+    font-family: woodcut;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 8px #7a4406;
+    font-size: 30px;
+    /*background-image: url('./5.jpg');*/
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-content: center;
+    line-height: 50px;
+}
+.nontech{
+    width: fit-content;
+    height: fit-content;
+    font-family: woodcut;
+    text-align: center;
+    text-shadow: 2px 2px 8px #7a4406;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    /*background-image: url('./5.jpg');*/
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-content: center;
+    line-height: 50px;
+}
+/* .both{
+    width: fit-content;
+    height: fit-content;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    border: 5px solid;
+    border-radius: 20px;
+    /*background-image: url('./5.jpg');
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-content: center;
+    
+} */
+
+
+.card {
+    height: 100px;
+    width: 100%;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 10px;
+    margin-left: 0px;
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between;
+    /*transition: height 5s;*/
+    transition: .6s cubic-bezier(.28,-0.03,0,.99)
+    /*transition-timing-function: ease-in-out;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    /*transition-duration: .6s;
+    /*box-shadow: 0px 10px 30px -1px rgb(255, 255, 255);*/
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    margin-bottom: 20px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    opacity: 0;
+    flex: 1;
+    transform: translateY(-30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.register_button{
+    justify-self: flex-end;
+    margin-right: 10px;
+    width: fit-content;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.register_button div{
+    width: 80px;
+    height: 35px;
+    background-color: #223;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style:none ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 10px;    
+    transform: translateY(-90px);
+    transition-delay: .3s;
+    transition: all .7s ease;
+    opacity: 1;
+}
+
+.register_button div a{
+    text-decoration: none;
+    color: azure;
+}
+
+.register_button div:active{
+    transform: scale(0.92);
+}
+
+.description p {
+    color: black;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+}
+
+.call{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+}
+.call a img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    height: 400px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translatey(0) !important;
+}
+input:checked + label .register_button div {
+    opacity: 1 !important;
+    transform: translatey(320px) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('paper_presen.jpg');
+    background-size: 100% 100%;
+}
+ .card[for="c2"] {
+     background-image: url('idea_voya.jpg');
+     background-size: 100% 100%;
+}
+ .card[for="c3"] {
+     background-image: url('metal_m.jpg');
+     background-size: 100% 100%;
+}
+ .card[for="c4"] {
+     background-image: url('current_cra.jpg');
+     background-size: 100% 100%;
+}
+ .card[for="c5"] {
+     background-image: url('code_qu.jpg');
+     background-size: 100% 100%;
+}
+
+.card[for="b1"] {
+    background-image: url('detective.jpg');
+    background-size: 100% 100%;
+}
+.card[for="b2"] {
+    background-image: url('bridge.jpg');
+    background-size: 100% 100%;
+}
+.card[for="b3"] {
+    background-image: url('black_per.jpg');
+    background-size: 100% 100%;
+}
+.card[for="b4"] {
+    background-image: url('fandom_qui.jpg');
+    background-size: 100% 100%;
+}
+
+ .card[for="d1"] {
+    background-image: url('elevate.jpg');
+    background-size: 100% 100%;
+}
+.card[for="d2"] {
+    background-image: url('fusion_for.jpg');
+    background-size: 100% 100%;
+}
+.card[for="d3"] {
+    background-image: url('mock_inter.jpg');
+    background-size: 100% 100%;
+}
+.card[for="d4"] {
+    background-image: url('prediction.jpg');
+    background-size: 100% 100%;
+}
+.card[for="d5"] {
+    background-image: url('picture_per.jpg');
+    background-size: 100% 100%;
+} 

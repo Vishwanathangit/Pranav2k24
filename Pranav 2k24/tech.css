@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: vintage;
+    src: url(MagicVintageDemo-ALaoM.ttf);
+}
+
+@font-face {
+    font-family: rebel;
+    src: url(Rebel\ Hero.otf);
+}
+body {
+    background-color: #131313;
+}
+
+@font-face {
+    font-family: woodcut;
+    src: url(WOODCUT.TTF);
+}
+.tech{
+    width: fit-content;
+    height: fit-content;
+    font-family:woodcut;
+    text-align: center;
+    color: #0c0c0a;
+    font-size: 50px;
+    text-shadow: 2px 2px 8px #7a4406;
+    /*background-image: url('./5.jpg');*/
+    padding: 10px;
+    margin-bottom: 30px;
+    align-content: center;
+}
+.nontech{
+    width: fit-content;
+    height: fit-content;
+    font-family:woodcut;
+    text-shadow: 2px 2px 8px #7a4406;
+    text-align: center;
+    color: #0c0c0a;
+    font-size: 50px;
+    padding: 10px;
+    margin-bottom: 30px;
+    align-content: center;
+} 
+
+.wrapper {
+    width: 100%;
+    height:fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.camera
+{
+    position: absolute;
+    top: -85%;
+    left: 0px;
+    z-index: -1;
+    height: 500px;
+}
+
+
+.reel{
+    position: absolute;
+    right: 0px;
+    width: 500px;
+    z-index: -1;
+}
+
+
+.grama{
+    position: absolute;
+    left: -10px;
+    bottom: -30%;
+    z-index: -1;
+}
+
+.type{
+    position: absolute;
+    right: -10%;
+    bottom: 0px;
+    z-index: -1;
+}
+
+.micro{
+    position: absolute;
+    right: 0px;
+    bottom: 10%;
+    z-index: -1;
+}
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -1px rgb(255, 255, 255);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 330px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+.register_button{
+    width: 120px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.register_button div{
+    width: 100px;
+    height: 60px;
+    background-color: #223;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style:none ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+    border-radius: 30px;
+    transition: transform 500ms;
+}
+
+.register_button div a{
+    text-decoration: none;
+    color: azure;
+}
+
+
+.call a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.call{
+    display: flex;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.register_button div:active{
+    transform: scale(0.92);
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+   background-image: url('paper_presen.jpg');
+   background-size: 100% 100%;
+}
+.card[for="c2"] {
+    background-image: url('idea_voya.jpg');
+    background-size: 100% 100%;
+}
+.card[for="c3"] {
+    background-image: url('metal_m.jpg');
+    background-size: 100% 100%;
+}
+.card[for="c4"] {
+    background-image: url('current_cra.jpg');
+    background-size: 100% 100%;
+}
+.card[for="c5"] {
+    background-image: url('code_qu.jpg');
+    background-size: 100% 100%;
+}
+.card[for="b1"] {
+    background-image: url('detective.jpg');
+    background-size: 100% 100%;
+}
+.card[for="b2"] {
+    background-image: url('bridge.jpg');
+    background-size: 100% 100%;
+}
+.card[for="b3"] {
+    background-image: url('black_per.jpg');
+    background-size: 100% 100%;
+}
+.card[for="b4"] {
+    background-image: url('fandom_qui.jpg');
+    background-size: 100% 100%;
+}
+
+.card[for="i1"] {
+    background-image: url('elevate.jpg');
+    background-size: 100% 100%;
+ }
+ .card[for="i2"] {
+     background-image: url('fusion_for.jpg');
+     background-size: 100% 100%;
+ }
+ .card[for="i3"] {
+     background-image: url('mock_inter.jpg');
+     background-size: 100% 100%;
+ }
+ .card[for="i4"] {
+     background-image: url('prediction.jpg');
+     background-size: 100% 100%;
+ }
+ .card[for="i5"] {
+     background-image: url('picture_per.jpg');
+     background-size: 100% 100%;
+ }
